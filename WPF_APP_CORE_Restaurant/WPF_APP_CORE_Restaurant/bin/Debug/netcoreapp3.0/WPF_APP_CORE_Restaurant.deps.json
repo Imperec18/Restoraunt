@@ -1,0 +1,297 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "WPF_APP_CORE_Restaurant/1.0.0": {
+        "dependencies": {
+          "Extended.Wpf.Toolkit": "3.7.0",
+          "Prism.Core": "7.2.0.1367",
+          "Prism.Wpf": "7.2.0.1367",
+          "System.Data.SqlClient": "4.7.0",
+          "Interop.OleDbSrc": "1.0.0.0"
+        },
+        "runtime": {
+          "WPF_APP_CORE_Restaurant.dll": {}
+        }
+      },
+      "CommonServiceLocator/2.0.4": {
+        "runtime": {
+          "lib/netcoreapp2.0/CommonServiceLocator.dll": {
+            "assemblyVersion": "2.0.4.0",
+            "fileVersion": "2.0.4.0"
+          }
+        }
+      },
+      "Extended.Wpf.Toolkit/3.7.0": {
+        "runtime": {
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll": {
+            "assemblyVersion": "3.7.0.0",
+            "fileVersion": "3.7.0.0"
+          },
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll": {
+            "assemblyVersion": "3.7.0.0",
+            "fileVersion": "3.7.0.0"
+          },
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll": {
+            "assemblyVersion": "3.7.0.0",
+            "fileVersion": "3.7.0.0"
+          },
+          "lib/net40/Xceed.Wpf.AvalonDock.dll": {
+            "assemblyVersion": "3.7.0.0",
+            "fileVersion": "3.7.0.0"
+          },
+          "lib/net40/Xceed.Wpf.Toolkit.dll": {
+            "assemblyVersion": "3.7.0.0",
+            "fileVersion": "3.7.0.0"
+          }
+        },
+        "resources": {
+          "lib/net40/de/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/es/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/fr/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/hu/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net40/it/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/pt-BR/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net40/ro/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net40/ru/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/sv/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net40/zh-Hans/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/3.0.0": {},
+      "Microsoft.Win32.Registry/4.6.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "4.6.0",
+          "System.Security.Principal.Windows": "4.6.0"
+        }
+      },
+      "Prism.Core/7.2.0.1367": {
+        "runtime": {
+          "lib/netcoreapp3.0/Prism.dll": {
+            "assemblyVersion": "7.2.0.1367",
+            "fileVersion": "7.2.0.1367"
+          }
+        }
+      },
+      "Prism.Wpf/7.2.0.1367": {
+        "dependencies": {
+          "CommonServiceLocator": "2.0.4",
+          "Prism.Core": "7.2.0.1367"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Prism.Wpf.dll": {
+            "assemblyVersion": "7.2.0.1367",
+            "fileVersion": "7.2.0.1367"
+          },
+          "lib/netcoreapp3.0/System.Windows.Interactivity.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "3.0.40218.0"
+          }
+        }
+      },
+      "runtime.native.System.Data.SqlClient.sni/4.6.0": {
+        "dependencies": {
+          "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x86.runtime.native.System.Data.SqlClient.sni": "4.4.0"
+        }
+      },
+      "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/sni.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "4.6.25512.1"
+          }
+        }
+      },
+      "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "runtimeTargets": {
+          "runtimes/win-x64/native/sni.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "4.6.25512.1"
+          }
+        }
+      },
+      "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "runtimeTargets": {
+          "runtimes/win-x86/native/sni.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "4.6.25512.1"
+          }
+        }
+      },
+      "System.Data.SqlClient/4.7.0": {
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.6.0",
+          "System.Security.Principal.Windows": "4.6.0",
+          "runtime.native.System.Data.SqlClient.sni": "4.6.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/System.Data.SqlClient.dll": {
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.700.19.46214"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.700.19.46214"
+          },
+          "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.700.19.46214"
+          }
+        }
+      },
+      "System.Security.AccessControl/4.6.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.0.0",
+          "System.Security.Principal.Windows": "4.6.0"
+        }
+      },
+      "System.Security.Principal.Windows/4.6.0": {},
+      "Interop.OleDbSrc/1.0.0.0": {
+        "runtime": {
+          "Interop.OleDbSrc.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WPF_APP_CORE_Restaurant/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CommonServiceLocator/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YpXfV5l6kv1iQRDfhQnN4RxocbnNehU/rAAS62IlaQUTAKN3WoUbtx9MHwE98Pb09mBemSs4xhVqFhXq27rjxw==",
+      "path": "commonservicelocator/2.0.4",
+      "hashPath": "commonservicelocator.2.0.4.nupkg.sha512"
+    },
+    "Extended.Wpf.Toolkit/3.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DeDuJY5qrXS6Z1RQ65HvgaWmDbSe7MSFuOaN9nBp+/ze8J6OEoNsUKxrQaAvkzeX6CiV1r6GOsovUyjDSSVoKg==",
+      "path": "extended.wpf.toolkit/3.7.0",
+      "hashPath": "extended.wpf.toolkit.3.7.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TsETIgVJb/AKoYfSP+iCxkuly5d3inZjTdx/ItZLk2CxY85v8083OBS3uai84kK3/baLnS5/b5XGs6zR7SuuHQ==",
+      "path": "microsoft.netcore.platforms/3.0.0",
+      "hashPath": "microsoft.netcore.platforms.3.0.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.Registry/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Xuqo5Lf5h1eUAbT8sJwNSEgusyEcQQQcza1R8dxJ6q/1vLSU1SG/WxtgiCPAth14dz/IjBXCxWT/+6E9glX33w==",
+      "path": "microsoft.win32.registry/4.6.0",
+      "hashPath": "microsoft.win32.registry.4.6.0.nupkg.sha512"
+    },
+    "Prism.Core/7.2.0.1367": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vrz2M/Hr9ItcAUvnT+n76ak6qPQMgJfyTYFSKqphveb9ibohm70vzc0cWu1jkeBY5XPS9RbUluXMa9WQGM0kPw==",
+      "path": "prism.core/7.2.0.1367",
+      "hashPath": "prism.core.7.2.0.1367.nupkg.sha512"
+    },
+    "Prism.Wpf/7.2.0.1367": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jr7qlHqXSg3k5c7pGrsJMAoXO/MZCPUVtWmAp0klfmHThrdGSMeHvG0QmchYv4zKLoPg+xDHBswuUe/umYp/dg==",
+      "path": "prism.wpf/7.2.0.1367",
+      "hashPath": "prism.wpf.7.2.0.1367.nupkg.sha512"
+    },
+    "runtime.native.System.Data.SqlClient.sni/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WRq11dBcJYyAbrUVguvv3BqNGl5ub60mZxUd+xaxNsSOb7tMLQxjbiyD/hF6FSl1akiom7GMttPDa3TW+UmnAQ==",
+      "path": "runtime.native.system.data.sqlclient.sni/4.6.0",
+      "hashPath": "runtime.native.system.data.sqlclient.sni.4.6.0.nupkg.sha512"
+    },
+    "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LbrynESTp3bm5O/+jGL8v0Qg5SJlTV08lpIpFesXjF6uGNMWqFnUQbYBJwZTeua6E/Y7FIM1C54Ey1btLWupdg==",
+      "path": "runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "hashPath": "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-38ugOfkYJqJoX9g6EYRlZB5U2ZJH51UP8ptxZgdpS07FgOEToV+lS11ouNK2PM12Pr6X/PpT5jK82G3DwH/SxQ==",
+      "path": "runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "hashPath": "runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
+      "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "System.Data.SqlClient/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lV3ljZeFc01DYyjcEBSxK3sy8Ow2R6AWa6o+g0t7B4hoDcA6Kzv4bTB4E4T7C/pKuZzHeBFLxe6fD4Am4q939Q==",
+      "path": "system.data.sqlclient/4.7.0",
+      "hashPath": "system.data.sqlclient.4.7.0.nupkg.sha512"
+    },
+    "System.Security.AccessControl/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gmlk6khICtVhiUnVBBtlsH0H/5QFDqhTZgtpp3AX14wWE6OIE+BX95NLD+X4AolXnIy/oXpNNmXYnsNfW1KuDQ==",
+      "path": "system.security.accesscontrol/4.6.0",
+      "hashPath": "system.security.accesscontrol.4.6.0.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Mdukseovp0YIGaz16FMH6nbfgZkrCFOJbtXQptv0aeBO9h775Ilb9+TDwLVTKikoW7y7CY7lpoXl9zmZ5G3ndA==",
+      "path": "system.security.principal.windows/4.6.0",
+      "hashPath": "system.security.principal.windows.4.6.0.nupkg.sha512"
+    },
+    "Interop.OleDbSrc/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

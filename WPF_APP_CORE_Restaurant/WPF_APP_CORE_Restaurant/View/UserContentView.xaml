@@ -1,0 +1,132 @@
+﻿<UserControl x:Class="WPF_APP_CORE_Restaurant.View.UserContentView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_APP_CORE_Restaurant.View"
+             xmlns:vm="clr-namespace:WPF_APP_CORE_Restaurant.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <vm:UserContentViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                      VerticalScrollBarVisibility="Auto">
+            <ListView ItemsSource="{Binding Orders}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Expander Style="{StaticResource MyCoolExpanderStyle}"
+                              HorizontalContentAlignment="Stretch">
+                            <Expander.Header>
+                                <Grid HorizontalAlignment="Stretch">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding StringFormat=Заказ {0},Path=ID}"
+                                           VerticalAlignment="Center"
+                                           Foreground="White"/>
+                                    <TextBlock Grid.Column="1"
+                                           Text="{Binding StringFormat=Цена {0},Path=EndPrice}"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Right"
+                                           Foreground="White"/>
+                                </Grid>
+                            </Expander.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Date}"/>
+                                    <TextBlock Text="{Binding StringFormat=Заказчик {0},Path=ID_Account.FullName}"/>
+                                    <TextBlock Text="{Binding StringFormat=Столик {0},Path=ID_Table.ID}"/>
+                                    <ListView ItemsSource="{Binding Dish}">
+                                        <ListView.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <WrapPanel/>
+                                            </ItemsPanelTemplate>
+                                        </ListView.ItemsPanel>
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid Margin="10">
+                                                    <Image Source="{Binding getimage}"
+                                                           Width="150"
+                                                           Height="150"/>
+                                                    <Grid HorizontalAlignment="Stretch"
+                                                          VerticalAlignment="Bottom"
+                                                          Height="60"
+                                                          >
+                                                        <Grid.Background>
+                                                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                                <GradientStop Color="#00000000" Offset="0.056"/>
+                                                                <GradientStop Color="DarkCyan" Offset="0.434"/>
+                                                            </LinearGradientBrush>
+                                                        </Grid.Background>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="1*"/>
+                                                            <ColumnDefinition Width="1*"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <TextBlock Text="{Binding Name}"
+                                                                   VerticalAlignment="Bottom"
+                                                                   HorizontalAlignment="Left"
+                                                                   Foreground="White"
+                                                                   Margin="5"/>
+                                                        <TextBlock Grid.Column="1"
+                                                                   Text="{Binding Price}"
+                                                                   VerticalAlignment="Bottom"
+                                                                   HorizontalAlignment="Right"
+                                                                   FontSize="16"
+                                                                   Foreground="White"
+                                                                   Margin="5"/>
+                                                    </Grid>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </StackPanel>
+                                <Button 
+                                            Grid.Column="1"
+                                            Style="{StaticResource btn-circle}"
+                                            Width="60"
+                                            Height="60"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Right"
+                                            Command="{Binding DataContext.DeleteOrderCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"
+                                            CommandParameter="{Binding}">
+                                    <Image Source="/Images/icon-delete.png"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Width="30"
+                                               Height="30"/>
+                                </Button>
+                            </Grid>
+                        </Expander>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1"
+                    HorizontalAlignment="Right">
+            <Button Style="{StaticResource btn-circle-dark}"
+                    Content="+" 
+                    Width="40"
+                    Height="40"
+                    FontSize="16"
+                    VerticalAlignment="Center"
+                    TextBlock.TextAlignment="Center"
+                    Command="{Binding AddOrderCommand}">
+                <Button.ToolTip>
+                    <ToolTip Content="Зделать заказ"/>
+                </Button.ToolTip>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

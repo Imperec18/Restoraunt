@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\icon-delete.png" />
+    <None Remove="Images\icon-save.png" />
+    <None Remove="Images\icon-settings.png" />
+    <None Remove="Images\icon-user.png" />
+    <None Remove="Images\windows_zune_logo_png_by_vinceranda-d2xsbx9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="OleDbSrc.dll">
+      <Guid>abadcb05-eba1-4f36-8379-6a2f885df1e6</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="RestaurantDataSet1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RestaurantDataSet1.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="RestaurantDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RestaurantDataSet1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="3.7.0" />
+    <PackageReference Include="Prism.Core" Version="7.2.0.1367" />
+    <PackageReference Include="Prism.Wpf" Version="7.2.0.1367" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\icon-delete.png" />
+    <Resource Include="Images\icon-save.png" />
+    <Resource Include="Images\icon-settings.png" />
+    <Resource Include="Images\icon-user.png" />
+    <Resource Include="Images\windows_zune_logo_png_by_vinceranda-d2xsbx9.png" />
+  </ItemGroup>
+
+</Project>

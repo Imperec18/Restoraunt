@@ -1,0 +1,31 @@
+﻿<Window x:Class="WPF_APP_CORE_Restaurant.View.AddDishView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_APP_CORE_Restaurant.View"
+        xmlns:vm="clr-namespace:WPF_APP_CORE_Restaurant.ViewModels"
+        mc:Ignorable="d"
+        Title="Добавление блюда" Height="353" Width="276" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+    <Window.DataContext>
+        <vm:AddDishViewModel/>
+    </Window.DataContext>
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Название"/>
+            <TextBox Padding="5" Text="{Binding GetDish.Name}"/>
+            <TextBlock Text="Описание"/>
+            <TextBox Padding="5" Text="{Binding GetDish.Description}"/>
+            <TextBlock Text="Цена"/>
+            <TextBox Padding="5" Text="{Binding GetDish.Price}"/>
+            <TextBlock Text="Изображение"/>
+            <Button Style="{StaticResource btn}" 
+                    Content="Загрузить изображение"
+                    Command="{Binding loadImage}"/>
+            <Button Style="{StaticResource btn}" 
+                    Content="Добавить"
+                    Command="{Binding OK}"/>
+        </StackPanel>
+    </Grid>
+</Window>

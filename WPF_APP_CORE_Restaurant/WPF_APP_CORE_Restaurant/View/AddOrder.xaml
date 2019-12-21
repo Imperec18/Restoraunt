@@ -1,0 +1,113 @@
+﻿<Window x:Class="WPF_APP_CORE_Restaurant.View.AddOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_APP_CORE_Restaurant.View"
+        xmlns:vm="clr-namespace:WPF_APP_CORE_Restaurant.ViewModels"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="AddOrder" Height="600" Width="651"
+        ResizeMode="NoResize"
+        >
+    <Window.DataContext>
+        <vm:AddOrderViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="Пользователь"
+                       FontSize="16"
+                       Margin="10"/>
+            <ComboBox ItemsSource="{Binding Accounts}"
+                      SelectedItem="{Binding ThisOrder.ID_Account}"
+                      SelectedIndex="0"
+                      FontSize="16">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding FullName}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <TextBlock Text="Столик"
+                       FontSize="16"
+                       Margin="10"/>
+            <ComboBox ItemsSource="{Binding Tables}"
+                      SelectedItem="{Binding ThisOrder.ID_Table}"
+                      SelectedIndex="0"
+                      FontSize="16">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding StringFormat=Столик-{0},Path=ID}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <TextBlock Text="Дата и время"
+                       FontSize="16"
+                       Margin="10"/>
+            <xctk:DateTimePicker Format="Custom" x:Name="fromDTP"
+                                 FormatString="dd-MM-yy hh:mm"
+                                 TimeFormat="Custom"
+                                 TimeFormatString="hh:mm:ss"
+                                 Value="{Binding Path=ThisOrder.Date, Mode=TwoWay}"
+                                 FontSize="16"/>
+
+        </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <ListView ItemsSource="{Binding Dishes}"
+                          HorizontalContentAlignment="Left"
+                          FlowDirection="LeftToRight"
+                          Margin="10"
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Width="Auto"
+                                       IsItemsHost="True"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox IsChecked="{Binding IsSelected,UpdateSourceTrigger=PropertyChanged}"
+                                  Width="150"
+                                  Height="150">
+                            <Grid>
+                                <Image Source="{Binding getimage}"
+                                       HorizontalAlignment="Center"
+                                       Width="150"
+                                       Height="150"/>
+                                <Border
+                                        Height="100"
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Bottom">
+                                    <Border.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="Transparent"/>
+                                            <GradientStop Color="DarkCyan" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <xctk:SingleUpDown VerticalAlignment="Bottom"
+                                                       Minimum="0"
+                                                       Background="Transparent"
+                                                       Foreground="White"
+                                                       FontSize="16"
+                                                       BorderThickness="0"
+                                                       Margin="10"
+                                                       Value="{Binding DishesCount}"/>
+                                </Border>
+                            </Grid>
+                        </CheckBox>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+        <Grid Grid.Row="2">
+            <Button Content="{Binding ThisOrder.ID_Account.FullName}"
+                    Command="{Binding AddOrderCommnad}"
+                    Style="{StaticResource btn}"/>
+        </Grid>
+    </Grid>
+</Window>

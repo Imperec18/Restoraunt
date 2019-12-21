@@ -1,0 +1,8 @@
+C:\Users\kryaz\source\repos\WPF_APP_CORE_Restaurant\DB.Core\bin\Debug\netcoreapp3.0\DB.Core.deps.json
+C:\Users\kryaz\source\repos\WPF_APP_CORE_Restaurant\DB.Core\bin\Debug\netcoreapp3.0\DB.Core.dll
+C:\Users\kryaz\source\repos\WPF_APP_CORE_Restaurant\DB.Core\bin\Debug\netcoreapp3.0\DB.Core.pdb
+C:\Users\kryaz\source\repos\WPF_APP_CORE_Restaurant\DB.Core\obj\Debug\netcoreapp3.0\DB.Core.csprojAssemblyReference.cache
+C:\Users\kryaz\source\repos\WPF_APP_CORE_Restaurant\DB.Core\obj\Debug\netcoreapp3.0\DB.Core.AssemblyInfoInputs.cache
+C:\Users\kryaz\source\repos\WPF_APP_CORE_Restaurant\DB.Core\obj\Debug\netcoreapp3.0\DB.Core.AssemblyInfo.cs
+C:\Users\kryaz\source\repos\WPF_APP_CORE_Restaurant\DB.Core\obj\Debug\netcoreapp3.0\DB.Core.dll
+C:\Users\kryaz\source\repos\WPF_APP_CORE_Restaurant\DB.Core\obj\Debug\netcoreapp3.0\DB.Core.pdb

@@ -1,0 +1,61 @@
+﻿<Window x:Class="WPF_APP_CORE_Restaurant.View.SelectDish"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_APP_CORE_Restaurant.View"
+        xmlns:vm="clr-namespace:WPF_APP_CORE_Restaurant.ViewModels"
+        xmlns:app="clr-namespace:WPF_APP_CORE_Restaurant"
+        mc:Ignorable="d"
+        Title="SelectDish" Height="600" Width="300"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow">
+    <Window.DataContext>
+        <vm:SelectedDishViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <app:BoolToVisibilityConverter x:Key="boolToVisible" TrueValue="Visible" FalseValue="Collapsed"/>
+        <app:NotTOBool x:Key="Not"/>
+    </Window.Resources>
+    <Grid Margin="10">
+        <StackPanel>
+            <Image Source="{Binding _dish.getimage}"
+                   Width="250"
+                   HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Название"
+                       Padding="5"
+                       FontSize="14"/>
+            <TextBox Text="{Binding _dish.Name}"
+                     IsEnabled="{Binding ElementName=edit_dish,Path=IsChecked}"
+                     Style="{StaticResource Input-field}"/>
+
+            <TextBlock Text="Описание"
+                       Padding="5"
+                       FontSize="14"/>
+            <TextBox Text="{Binding _dish.Description}"
+                     IsEnabled="{Binding ElementName=edit_dish,Path=IsChecked}"
+                     Style="{StaticResource Input-field}"/>
+
+            <TextBlock Text="Цена"
+                       Padding="5"
+                       FontSize="14"/>
+            <TextBox Text="{Binding _dish.Price}"
+                     Style="{StaticResource Input-field}"
+                     IsEnabled="{Binding ElementName=edit_dish,Path=IsChecked}"/>
+        </StackPanel>
+        <CheckBox x:Name="edit_dish"
+                  Style="{StaticResource CircleCheckbox}"
+                  Width="60" Height="60"
+                  HorizontalAlignment="Right"
+                  VerticalAlignment="Bottom"
+                  IsChecked="False">
+            <Image Source="/WPF_APP_CORE_Restaurant;component/Images/icon-settings.png"
+                   Width="30"
+                   Height="30"
+                   Visibility="{Binding isAdmin,Converter={StaticResource boolToVisible}}" 
+                   />
+        </CheckBox>
+    </Grid>
+</Window>
